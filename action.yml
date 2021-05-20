@@ -1,0 +1,14 @@
+# action.yml
+name: 'opmbuild'
+description: 'Builds an OPM from Sources'
+inputs:
+  filename:  # id of input
+    description: 'Name of the SOPM'
+    required: true
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - build
+    - ${{ inputs.filename }}
