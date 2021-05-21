@@ -14,4 +14,4 @@ RUN apk --no-cache add ca-certificates git
 WORKDIR /root/
 COPY --from=upx /opmbuilder /opmbuilder
 RUN /opmbuilder help
-CMD ["/opmbuilder"]
+ENTRYPOINT ["/opmbuilder"]
